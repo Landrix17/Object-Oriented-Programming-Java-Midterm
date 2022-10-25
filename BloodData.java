@@ -1,23 +1,25 @@
-import java.util.*;
-class BloodData{
-
-	public static String bloodType;
-	public static String rhFactor;
-	public BloodData(){
-
-bloodType = "O";
-rhFactor = "+";
-
+public class BloodData {
+private String bloodType;
+private String rhFactor;
+	
+	public String getBloodType(){
+	return bloodType;
+}
+	public void setBloodType(String newBloodType){
+	this.bloodType=newBloodType;
+}
+	public String getrhFactor(){
+	return rhFactor;
 }
 
-public BloodData(String bt, String rh){
-bloodType = bt;
-rhFactor = rh;
-
+	public void setrhFactor(String newrhFactor){
+	this.rhFactor=newrhFactor;
 }
-
-public void display(){
-System.out.println(bloodType + rhFactor + " is added to the blood bank");
-
+	public BloodData() {
+	bloodType="o";
+	rhFactor="+";
+}
+	public void display() {
+	System.out.println(getBloodType()+getrhFactor()+" is added to the bloodbank.\n");
 }
 }
